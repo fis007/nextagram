@@ -11,7 +11,10 @@ import {
 export default function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
-      <img src="https://insta.nextacademy.com/static/favicon.png" />
+      <img
+        style={{ marginRight: "0.5%" }}
+        src="https://insta.nextacademy.com/static/favicon.png"
+      />
       <Navbar.Brand href="#home">Nextagram</Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

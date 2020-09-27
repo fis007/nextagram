@@ -3,12 +3,12 @@ import { Button } from "react-bootstrap";
 
 export default function ProfileImage({ id, name, image }) {
   return (
-    <div>
+    <div style={{ width: "20%" }}>
       <li style={{ listStyleType: "none", margin: "3%" }}>
         <h3 style={{ color: "blue" }}>{name}</h3>
         <img
           style={{
-            width: "15%",
+            width: "60%",
             borderRadius: "50%",
             padding: "0.25%",
             border: "1px orange solid",
@@ -17,7 +17,7 @@ export default function ProfileImage({ id, name, image }) {
         ></img>
         <div>
           <Button
-            style={{ width: "15%", marginTop: "1%" }}
+            style={{ width: "60%", marginTop: "1%", fontSize: "60%" }}
             type="button"
             class="btn btn-primary"
           >
