@@ -13,7 +13,7 @@ export default function HomePage({ users }) {
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                border: "1px solid red",
+                marginBottom: "2%",
               }}
             >
               <ProfileImage

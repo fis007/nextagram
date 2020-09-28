@@ -12,7 +12,6 @@ export default function UserImages({ id }) {
       .then((result) => {
         // If successful, we do stuffs with 'result'
         setImages(result.data);
-        console.log(images[0]);
       })
       .catch((error) => {
         // If unsuccessful, we notify users what went wrong

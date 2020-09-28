@@ -14,6 +14,8 @@ export default function ProfileImage({ id, name, image }) {
             borderRadius: "50%",
             padding: "0.25%",
             border: "1px orange solid",
+            marginBottom: "3%",
+            marginTop: "3%",
           }}
           src={image}
         ></img>
