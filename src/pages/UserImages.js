@@ -24,6 +24,7 @@ export default function UserImages({ id }) {
       {images.map((image) => {
         return (
           <img
+            alt="img"
             style={{
               width: "80px",
               height: "80px",

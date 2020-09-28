@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./NavBar";
+
 import "./App.css";
-import ProfileImage from "./ProfileImage";
+
 import axios from "axios";
-import HomePage from "./HomePage";
+import HomePage from "./pages/HomePage";
+import ProfileImage from "./pages/ProfileImage";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import UserProfilePage from "./pages/UserProfilePage";
+import NavBar from "./pages/NavBar";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -24,7 +28,28 @@ function App() {
 
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
-      <HomePage users={users} />
+      <NavBar />
+      <BrowserRouter>
+        {/* <Link to="/">Home</Link>
+        <Link to="/users/1">My Profile</Link> */}
+
+        <Switch>
+          <Route
+            path="/users/:id"
+            render={() => {
+              return <UserProfilePage users={users} />;
+            }}
+          />
+
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <HomePage users={users} />;
+            }}
+          />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

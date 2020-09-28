@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Route, Link } from "react-router-dom";
 
 export default function ProfileImage({ id, name, image }) {
   return (
@@ -7,6 +8,7 @@ export default function ProfileImage({ id, name, image }) {
       <li style={{ listStyleType: "none", margin: "3%" }}>
         <h3 style={{ color: "blue" }}>{name}</h3>
         <img
+          alt="img"
           style={{
             width: "60%",
             borderRadius: "50%",
@@ -19,9 +21,9 @@ export default function ProfileImage({ id, name, image }) {
           <Button
             style={{ width: "60%", marginTop: "1%", fontSize: "60%" }}
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
           >
-            See More
+            <Link to={`/users/${id}`}>My Profile</Link>
           </Button>
         </div>
       </li>

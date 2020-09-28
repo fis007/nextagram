@@ -6,12 +6,16 @@ import UserImages from "./UserImages";
 export default function HomePage({ users }) {
   return (
     <div>
-      <NavBar />
-
       <ul>
         {users.map((user) => (
           <>
-            <div style={{ display: "flex", border: "1px solid red" }}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                border: "1px solid red",
+              }}
+            >
               <ProfileImage
                 id={user.id}
                 name={user.username}
